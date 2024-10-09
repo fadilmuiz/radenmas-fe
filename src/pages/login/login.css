@@ -1,0 +1,160 @@
+/* Container styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  background-image: url(../../assets/img-10.jpeg);
+  padding-top: 4.8rem;
+}
+
+.login-card {
+  padding: 2rem;
+  border-radius: 5%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 22rem;
+  min-height: 33rem;
+  background-image: url(../../assets/bg-login.jpeg);
+  background-repeat: no-repeat;
+  background-size: 22rem 33rem;
+  background-position: center;
+  position: relative;
+}
+
+.coffee-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Text styles */
+h2 {
+  margin-top: 10rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.login-card p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.login-card a {
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
+
+
+/* Form styles */
+input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #6d4c41;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #5d4037;
+}
+
+/* Container untuk input password */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.password-toggle-icon:hover {
+  color: #5d4037;
+}
+
+
+@media (max-width: 768px) {
+  .login-card {
+    padding-top: 9rem;
+    padding: 2rem;
+    border-radius: 5%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    background-image: url(../../assets/bg-login.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 96%;
+    background-position: center;
+    position: relative;
+  }
+
+  .login-card form {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin-top: 18rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .login-container p {
+    color: #fff;
+  }
+
+  .login-btn {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.932);
+    font-size: 12px;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+  }
+
+  form input {
+    margin-bottom: 15px;
+  }
+
+  .password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    cursor: pointer;
+    color: #6d4c41;
+    font-size: 1.25rem;
+  }
+}

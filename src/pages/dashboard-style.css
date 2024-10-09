@@ -1,0 +1,394 @@
+:root {
+  --main-color: #443;
+  --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+  --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+  --border: .2rem solid var(--main-color);
+  --border-hover: .2rem dashed var(--main-color);
+}
+
+
+/* hero section body */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../assets/image-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 4rem 7%;
+  max-width: 40rem;
+}
+
+.hero .content h1 {
+  font-size: 2.3rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  font-size: 2.5rem;
+  color: rgb(192, 132, 54);
+}
+
+.hero .content p {
+  color: #fff;
+  margin: 2px 0;
+}
+
+.hero .cup {
+  margin-top: 10rem;
+  margin-left: 4rem;
+  height: 30rem;
+  width: 20rem;
+  animation: float 4s linear infinite;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #fff;
+  background-color: rgb(192, 132, 54);
+  padding: 0.8rem 3rem;
+  font-size: .9rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3,1);
+  cursor: pointer;
+}
+
+.hero .content .cta:hover {
+  color: black;
+  background-color: #fff;
+}
+
+/* about tentang kami */
+.about {
+  padding-top: 5.5rem;
+  background-color: #341d0a;
+}
+
+.about h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.about h2 span {
+  color: rgb(192, 132, 54);
+}
+
+.about .row {
+  display: flex;
+  padding-top: 1rem;
+  color: #fff;
+
+}
+
+.about .row .about-img img {
+  width: 30rem;
+  height: 30rem;
+  animation: aboutImage 4s linear infinite;
+  margin-left: 7rem;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  padding-top: 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.about .row .content p {
+  width: 30rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 2rem;
+}
+
+.icons-container .icons {
+  flex: 1 1 12rem;
+  padding: 1rem;
+  text-align: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.icons-container .icons img {
+  height: 5rem;
+}
+
+.icons-container .icons h3 {
+  font-size: 1.7rem;
+  padding-top: 1rem;
+  color: #fff;
+}
+
+.content-about {
+  color: #fff;
+  text-align: center;
+}
+
+@keyframes aboutImage {
+
+  0%,
+  100% {
+    transform: scale(.9);
+    border-radius: var(--border-radius-hover);
+  }
+
+  50% {
+    transform: scale(.8);
+    border-radius: var(--border-radius);
+  }
+}
+
+/* menu */
+.menu {
+  min-height: 100vh;
+  /* display: flex; */
+  padding-top: 6rem;
+  text-align: center;
+  align-items: center;
+  background-image: url(../assets/book-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.menu .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px;
+}
+
+.menu .box-container .box {
+  flex: 1;
+  cursor: pointer;
+  max-width: 20rem;
+  height: 10rem;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 6rem;
+}
+
+.menu .box-container .box:hover {
+  border: var(--border-hover);
+  border-radius: var(--border-radius-hover);
+}
+
+.menu .box-container .box img {
+  height: 8rem;
+  margin-left: -6rem;
+  border-radius: 10%;
+}
+
+.menu .box-container .box img:hover {
+  animation: aboutImage 4s linear infinite;
+}
+
+.menu .box-container .box .content h3 {
+  font-size: 1rem;
+  color: var(--main-color);
+  line-height: 2.5;
+}
+
+.menu .box-container .box .content p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.menu .box-container .box .content span {
+  font-size: 1.5rem;
+  color: #443;
+  line-height: 1.8;
+}
+
+/* review */
+.review {
+  background: linear-gradient(rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)), url(../assets/img-10.jpeg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.review h1 {
+  color: #fff;
+  font-size: 40px;
+}
+
+.container-review {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  overflow: visible;
+}
+
+.review img {
+  flex: 1;
+  height: 18rem;
+  width: auto;
+  margin: 7px;
+  filter: brightness(50%);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.review img:hover {
+  filter: brightness(100%);
+  transform: scale(1.05);
+}
+
+
+/* footer */
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  color: #fff;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer .box-container .box a span {
+  display: inline-block;
+  padding-left: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .box-container .box a:hover span {
+  transform: translateX(10px);
+}
+
+.copyright {
+  background-color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .copyright {
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 758px) {
+  html {
+    font-size: 75%;
+  }
+
+  .hero {
+    background-image: url(../assets/image-3.jpeg);
+  }
+
+  .about .row {
+    display: block;
+
+  }
+
+  .about .row .about-img img {
+    margin: 1rem;
+  }
+
+  .menu .box-container .box {
+    min-width: 25rem;
+  }
+
+  .menu .box-container .box .content p {
+    line-height: 1.3;
+  }
+
+  .review {
+    background: url(../assets/img-11.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .review h1 {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .container-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 10px;
+  }
+
+  .review img {
+    height: 27rem;
+    width: auto;
+    margin: 20px;
+    filter: brightness(50%);
+    transition: all 0.3s ease;
+  }
+
+  .footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .copyright {
+    background-color: #fff;
+    font-size: 12px;
+    text-align: center;
+    /* color: white; */
+  }
+}
+
+@media (min-width: 1025px) {
+  .copyright {
+    font-size: 12px;
+    padding: 20px;
+  }
+}

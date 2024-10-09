@@ -1,0 +1,132 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: rgb(16, 14, 14);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 98%;
+}
+
+.navbar .navbar-logo {
+  height: 3.5rem;
+  width: 4rem;
+  cursor: pointer;
+}
+
+/* .navbar .navbar-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  width: 20rem;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: rgb(230, 165, 87);
+} */
+
+.navbar .navbar-nav {
+  margin-left: 35%;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 7px;
+  margin-right: 7px;
+  padding: 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(230, 165, 87);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid rgb(230, 165, 87);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0rem 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(230, 165, 87);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+
+  .navbar .navbar-logo {
+    margin: 7px 0;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+    margin-left: 70%;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(16, 14, 14);
+    width: 40%;
+    height: 100vh;
+    opacity: 0;
+    transform: translateX(100%);
+    padding: 1rem 7%;
+    transition: right 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    /* transform 0.5s ease-in-out, opacity 0.5s ease-in-out;  */
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover:after {
+    transform: scaleX(0.3);
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .copyright {
+    font-size: 12px;
+    padding: 20px;
+  }
+}

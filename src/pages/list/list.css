@@ -1,0 +1,37 @@
+.list-user-page {
+  margin-top: 7rem;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table button {
+  margin: 4px;
+  padding: 5px;
+  border-radius: 10%;
+  width: 3rem;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.edit-user-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

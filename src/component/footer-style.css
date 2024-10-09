@@ -1,0 +1,151 @@
+.footer {
+  margin-top: 30px;
+  background: url(../assets/bg-footer.jpg) center/cover no-repeat;
+  color: #fff;
+  height: 20rem;
+}
+
+.footer h3 {
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+.footer .content {
+  display: flex;
+  padding-left: 80px;
+  gap: 15px;
+}
+
+.footer .content-jaskir {
+  display: flex;
+  padding-left: 80px;
+  gap: 15px;
+}
+
+.content-footer {
+  background-color: #fff;
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 3px;
+  display: flex;
+  cursor: pointer;
+}
+
+.content-footer-jaskir {
+  background-color: #fff;
+  height: 2.3rem;
+  width: 5.5rem;
+  border-radius: 3px;
+  display: flex;
+  cursor: pointer;
+}
+
+.content-footer-jaskir img {
+  object-fit: contain;
+  width: 100%;
+
+}
+
+.content-footer a {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-weight: bold;
+}
+
+.content-footer img {
+  object-fit: contain;
+  width: 100%;
+}
+
+#instagram-menu {
+  color: rgb(255, 85, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+#instagram-menu p {
+  margin-left: 5px;
+}
+
+#message-menu {
+  color: rgb(63, 214, 63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+#message-menu p {
+  margin-left: 5px;
+}
+
+#shopping-menu {
+  color: rgb(255, 85, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+#shopping-menu p {
+  margin-left: 5px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  max-height: 50px;
+}
+
+@media (max-width: 600px) {
+  .footer .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    gap: 15px;
+  }
+
+  .footer h3 {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .content-footer {
+    height: 2.5rem;
+    width: 13rem;
+  }
+
+  .copyright{
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    gap: 15px;
+  }
+
+  .footer h3 {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .content-footer {
+    height: 2.5rem;
+    width: 13rem;
+  }
+}
