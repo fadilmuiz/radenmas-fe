@@ -12,3 +12,5 @@ export const LOGIN = "login/postLogin";
 export const LOGIN_FAILED = "login/postLoginFailed";
 
 export const IMAGE_DETAIL = "image/setDetailImage"
+
+export const EDIT = "edit/setEdit"

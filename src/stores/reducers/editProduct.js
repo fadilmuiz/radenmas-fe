@@ -1,19 +1,21 @@
-import { EDIT_PRODUCT } from "../action/actionType";
+import { EDIT } from "../action/actionType";
 
 const initialState = {
   dataProduct: [],
 };
 
-const productReducer = (state = initialState, action) => {
+const editReducer = (state = initialState, action) => {
   switch (action.type) {
-    case EDIT_PRODUCT:
+    case EDIT:
       return {
         ...state,
-        dataProduct: action.payload,
+        dataProduct: state.dataProduct.map((user) =>
+          user.id === action.payload.id ? action.payload : user
+        ),
       };
     default:
       return state;
   }
-}
+};
 
-export default productReducer;
+export default editReducer;

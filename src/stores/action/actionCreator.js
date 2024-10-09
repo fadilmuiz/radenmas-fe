@@ -1,4 +1,4 @@
-import { CATEGORY_SET, USER_SET, PRODUCT_LOADING, REGISTER, LOGIN, DETAIL_SET, DETAIL_CATEGORY, IMAGE_DETAIL } from '../action/actionType'
+import { CATEGORY_SET, USER_SET, EDIT, PRODUCT_LOADING, REGISTER, LOGIN, DETAIL_SET, DETAIL_CATEGORY, IMAGE_DETAIL } from '../action/actionType'
 // const BASE_URL = `http://localhost:3000`
 const BASE_URL = `https://api-be-production.up.railway.app`
 import { toast } from 'react-toastify';
@@ -80,8 +80,6 @@ export const setUser = () => async (dispatch) => {
       }
     })
     const responseJson = await response.json();
-    // console.log(responseJson);
-
     dispatch(fetchUser(responseJson))
   } catch (err) {
     console.log(err);
@@ -100,6 +98,7 @@ export const deleteUserMiddleware = (id) => async (dispatch) => {
       },
     });
     const responseJson = response.json();
+    toast.success("Delete user successful!");
     // console.log(responseJson);
   } catch (err) {
     console.log(err);
@@ -107,6 +106,11 @@ export const deleteUserMiddleware = (id) => async (dispatch) => {
 };
 
 // --------------------- EDIT USER ----------------------\\
+export const editAction = (payload) => ({
+  type: EDIT,
+  payload,
+});
+
 export const editProduct = (data, id) => async (dispatch) => {
   try {
     const response = await fetch(`${BASE_URL}/user/${id}`, {
@@ -118,9 +122,15 @@ export const editProduct = (data, id) => async (dispatch) => {
       },
       body: JSON.stringify(data)
     });
+
+    if (!response.ok) {
+      throw new Error("Failed to update user");
+    }
     const responseJson = await response.json();
-    // console.log(responseJson);
+    dispatch(editAction(responseJson));
+    toast.success("Edit user successful!");
+
   } catch (err) {
-    console.log(err);
+    console.log("Error editing user:", err);
   }
-}
+};

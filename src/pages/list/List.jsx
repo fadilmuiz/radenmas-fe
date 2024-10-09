@@ -25,8 +25,6 @@ const ListUser = () => {
     setCurrentUser(user);
     setEditData({ exp: user.exp, level: user.level, point: user.point });
   };
-
-  
   
   const handleSaveEdit = (e) => {
     e.preventDefault();
@@ -45,10 +43,10 @@ const ListUser = () => {
     <>
       <Navbar />
       <div className="list-user-page">
-        <h1>List of Users</h1>
+        <h1 style={{color: "white"}}>List of Users</h1>
         <table className="user-table">
           <thead>
-            <tr>
+            <tr style={{color: "white"}}>
               <th>NO</th>
               <th>Name</th>
               <th>No Hp</th>
@@ -58,7 +56,7 @@ const ListUser = () => {
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody style={{color: "white"}}>
             {users?.users?.map((user, index) => (
               <tr key={user.id}>
                 <td>{index + 1}</td>
