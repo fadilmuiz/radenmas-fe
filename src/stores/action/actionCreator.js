@@ -99,7 +99,7 @@ export const deleteUserMiddleware = (id) => async (dispatch) => {
     });
     const responseJson = response.json();
     toast.success("Delete user successful!");
-    // console.log(responseJson);
+    console.log(responseJson);
   } catch (err) {
     console.log(err);
   }

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { setUser, deleteUserMiddleware, editProduct } from '../../stores/action/actionCreator';
 import Navbar from '../../component/Navbar';
 import './list.css';
 
 const ListUser = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { users } = useSelector((state) => state.user);
   const [editMode, setEditMode] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -17,7 +19,6 @@ const ListUser = () => {
 
   const handleDelete = (id) => {
     dispatch(deleteUserMiddleware(id));
-    window.location.reload();
   };
 
   const handleEdit = (user) => {
@@ -31,7 +32,6 @@ const ListUser = () => {
     const updatedUser = { ...currentUser, ...editData };
     dispatch(editProduct(updatedUser, currentUser.id));
     setEditMode(false);
-    window.location.reload();
   };
 
   const handleChange = (e) => {
